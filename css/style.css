@@ -67,6 +67,27 @@ h2 {
   font-size: 1.6rem;
 }
 
+.badge {
+  border-radius: 32px;
+  white-space: nowrap;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.badge--primary {
+  font-size: 1.4rem;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: 6px 19px 3px 19px;
+}
+
+.badge--secondary {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 6px 16px 3px 16px;
+}
+
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
