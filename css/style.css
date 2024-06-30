@@ -23,6 +23,7 @@ html {
 body {
   color: var(--color-body);
   font-size: 1.4rem;
+  line-height: 1.7;
 }
 
 h1,
@@ -38,6 +39,12 @@ h1 {
 
 h2 {
   font-size: 2.22rem;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .btn {
@@ -113,7 +120,6 @@ h2 {
 
 .card {
   display: inline-block;
-  /* max-width: 450px; */
   overflow: hidden;
   border-radius: 2rem;
   background-color: var(--color-secondary-light);
@@ -168,9 +174,39 @@ h2 {
   padding: 1.3rem 8.5rem;
 }
 
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12rem;
+}
+
+.feature__img {
+  margin-bottom: 26px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.feature__img img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.feature__detail h2 {
+  margin-bottom: 15px;
+}
+
+.feature__detail p {
+  margin-bottom: 36px;
+  font-size: 1.4rem;
+}
+
+.feature__detail .btn--primary {
+  padding: 1.2rem 3rem;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 @media screen and (min-width: 1024px) {
@@ -183,6 +219,9 @@ h2 {
   h2 {
     font-size: 3.5rem;
   }
+  .container {
+    padding: 0;
+  }
   .btn {
     font-size: 1.6rem;
   }
@@ -192,13 +231,31 @@ h2 {
   .list--tick .list__item {
     margin-bottom: 2rem;
   }
-  /* .block-plan {
-    grid-template-columns: repeat(3, 1fr);
-  } */
   .plan--popular {
     transform: scale(1.1);
   }
   .plan--popular:hover {
     transform: scale(1.15);
+  }
+  .feature :first-child {
+    flex-direction: row-reverse;
+  }
+  .feature__section {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+  .feature__img {
+    padding: 0;
+    text-align: unset;
+  }
+  .feature__img img {
+    max-width: unset;
+  }
+  .feature__detail p {
+    font-size: 1.8rem;
+  }
+  .feature__detail .btn--primary {
+    font-size: 1.6rem;
   }
 }
