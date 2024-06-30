@@ -4,7 +4,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 :root {
@@ -45,7 +44,7 @@ h2 {
   font-size: 1.4rem;
   font-weight: 700;
   border-radius: 8px;
-  padding: 2rem 2.5rem;
+  padding: 1.3rem 2.5rem;
   border: 0;
   outline: 0;
   white-space: nowrap;
@@ -88,6 +87,92 @@ h2 {
   padding: 6px 16px 3px 16px;
 }
 
+.list {
+  list-style: none;
+  font-size: 1.8rem;
+}
+
+.list--inline .list__item {
+  display: inline-block;
+}
+
+.list--tick .list__item {
+  background: url(../assets/images/Tick-Square.svg) no-repeat;
+  background-position: right center;
+  padding-right: 3.5rem;
+  background-color: var(--color-secondary-light);
+  margin-bottom: 1.5rem;
+}
+
+.block-plan {
+  display: grid;
+  gap: 5rem 8rem;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+}
+
+.card {
+  display: inline-block;
+  /* max-width: 450px; */
+  overflow: hidden;
+  border-radius: 2rem;
+  background-color: var(--color-secondary-light);
+  transition: all 0.2s ease-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card--primary .card__header {
+  background-color: #ff7a50;
+}
+
+.card--secondary .card__header {
+  background-color: var(--color-secondary-dark);
+}
+
+.card__header,
+.card__body {
+  padding: 40px 20px;
+}
+
+.card__header {
+  /* border-radius: 2rem 2rem 0 0; */
+  font-size: 1.4rem;
+  color: var(--color-white);
+}
+
+.card__introduction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.card__price {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.card__price span {
+  font-size: 1rem;
+}
+
+.card__body .list.list--tick :last-child {
+  margin-bottom: 80px;
+}
+
+.btn__card {
+  padding: 1.3rem 8.5rem;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
@@ -103,5 +188,17 @@ h2 {
   }
   .btn--block {
     font-size: 2rem;
+  }
+  .list--tick .list__item {
+    margin-bottom: 2rem;
+  }
+  /* .block-plan {
+    grid-template-columns: repeat(3, 1fr);
+  } */
+  .plan--popular {
+    transform: scale(1.1);
+  }
+  .plan--popular:hover {
+    transform: scale(1.15);
   }
 }
