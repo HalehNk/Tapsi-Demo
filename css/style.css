@@ -46,9 +46,6 @@ h2 {
   margin: 0 auto;
   padding: 0 20px;
 }
-.hidden {
-  display: none;
-}
 
 .btn {
   font-size: 1.4rem;
@@ -415,6 +412,87 @@ input,
   height: auto;
 }
 
+.nav {
+  background-color: var(--color-navbar-);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10%;
+  flex-wrap: wrap;
+}
+
+.nav__logo {
+  margin-top: 10px;
+}
+
+.nav__toggler {
+  /* width: 35px; */
+  /* height: auto; */
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  border-radius: 100px;
+  background-color: #000;
+  margin: 5px 0;
+  transition: all 0.4s ease-out;
+}
+
+.toggled .bar-one {
+  transform: rotate(45deg);
+  transform-origin: top left;
+  /* margin: 8px 0; */
+}
+
+.toggled .bar-two {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.toggled .bar-three {
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+  /* margin: 8px 0; */
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  /* display: none; */
+}
+
+.nav__item a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #545454;
+  padding: 0.5rem 0;
+  display: inline-block;
+}
+
+.nav__item a:hover {
+  color: var(--color-primary);
+}
+
+.btn__download {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 7px 40px;
+  align-self: self-start;
+  margin: 1rem 0;
+  display: inline-block;
+}
+
+.hidden,
+.hidden-list {
+  display: none;
+}
+
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
@@ -427,6 +505,9 @@ input,
   }
   .container {
     padding: 0 10px;
+  }
+  .hidden-list {
+    display: flex;
   }
   .hidden {
     display: block;
@@ -546,5 +627,27 @@ input,
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
+  }
+  .nav {
+    flex-wrap: nowrap;
+  }
+  .nav__toggler {
+    display: none;
+  }
+  .nav__list {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 3rem;
+    width: auto;
+  }
+  .nav__item a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #545454;
+  }
+  .nav__item a:hover {
+    color: var(--color-primary);
   }
 }
