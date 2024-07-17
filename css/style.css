@@ -42,9 +42,10 @@ h2 {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
+  /* padding: 0 20px; */
+  padding: 3% 10%;
 }
 
 .btn {
@@ -180,6 +181,8 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 12rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 .feature__img {
@@ -201,6 +204,7 @@ h2 {
 .feature__detail p {
   margin-bottom: 36px;
   font-size: 1.4rem;
+  text-align: justify;
 }
 
 .feature__detail .btn--primary {
@@ -209,10 +213,12 @@ h2 {
   font-weight: 700;
 }
 
-/* .contact-us {
-  width: 100%;
+.contact-us {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
+/*
 .contact-us__socials {
   width: 70%;
 }
@@ -448,7 +454,7 @@ input,
 
 .toggled .bar-two {
   opacity: 0;
-  transform: translateX(-20px);
+  /* transform: translateX(-20px); */
 }
 
 .toggled .bar-three {
@@ -625,6 +631,13 @@ input,
   display: none;
 }
 
+.line--big {
+  width: 80%;
+  height: 1px;
+  background-color: #ddd;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
@@ -659,6 +672,10 @@ input,
   .plan--popular:hover {
     transform: scale(1.15);
   }
+  .feature {
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+  }
   .feature :first-child {
     flex-direction: row-reverse;
   }
@@ -682,6 +699,8 @@ input,
   }
   .contact-us {
     width: 100%;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
   }
   .contact-us__socials {
     width: 70%;
@@ -811,6 +830,7 @@ input,
   }
   .services {
     margin-top: 27rem;
+    margin-bottom: 7rem;
   }
   .services h2 {
     font-size: 3.5rem;
@@ -830,7 +850,7 @@ input,
     display: inline-block;
   }
   .tab-content .feature__img img {
-    width: 380px;
+    width: 500px;
     height: auto;
   }
   .tab-content .feature__detail h3 {
